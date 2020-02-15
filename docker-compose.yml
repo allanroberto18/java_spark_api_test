@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  api:
+    container_name: epilot-api
+    image: epilot/api
+    build:
+      context: ./
+    ports:
+      - 4567:4567
+    networks:
+      - epilot-api
+
+networks:
+  epilot-api:
